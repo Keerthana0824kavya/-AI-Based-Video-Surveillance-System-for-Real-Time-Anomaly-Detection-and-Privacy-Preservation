@@ -1,0 +1,107 @@
+{
+  "theme": "dark",
+  "archetype": "4 (Swiss & High-Contrast - Technical Dark Mode)",
+  "typography": {
+    "fonts": [
+      {
+        "family": "Chivo",
+        "usage": "Headings (H1-H4), giving a strong, authoritative, modern feel.",
+        "google_font_url": "https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap"
+      },
+      {
+        "family": "IBM Plex Mono",
+        "usage": "Data, timestamps, logs, overlines, live metrics, giving a technical/surveillance terminal vibe.",
+        "google_font_url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      },
+      {
+        "family": "Karla",
+        "usage": "Body text, general descriptions, forms.",
+        "google_font_url": "https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap"
+      }
+    ],
+    "scale": {
+      "h1": "text-4xl sm:text-5xl tracking-tight font-black font-['Chivo']",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-bold font-['Chivo']",
+      "h3": "text-xl sm:text-2xl font-bold font-['Chivo']",
+      "h4": "text-lg font-bold font-['Chivo']",
+      "body": "text-base leading-relaxed font-['Karla']",
+      "mono_data": "text-sm tracking-wide font-['IBM_Plex_Mono']",
+      "overline": "text-xs uppercase tracking-[0.2em] font-medium font-['IBM_Plex_Mono']"
+    }
+  },
+  "colors": {
+    "hsl_variables": {
+      "--background": "225 15% 6%",
+      "--surface": "225 15% 10%",
+      "--surface-hover": "225 15% 14%",
+      "--border": "225 15% 18%",
+      "--border-hover": "225 15% 25%",
+      "--text-primary": "0 0% 98%",
+      "--text-secondary": "225 10% 65%",
+      "--primary": "190 90% 50%",
+      "--severity-low": "140 70% 50%",
+      "--severity-medium": "45 95% 55%",
+      "--severity-high": "25 90% 55%",
+      "--severity-critical": "345 80% 55%"
+    },
+    "strategy": "Deep charcoal/navy background to reduce glare. Neon accents used strictly for functional status indicators (Normal, Warning, Critical) to draw immediate attention."
+  },
+  "layout_and_spacing": {
+    "strategy": "The 'Control Room' Grid (Mode B). Dense, strict hierarchy, every pixel utilized. Use max screen height where possible for the main dashboard view.",
+    "container_padding": "p-4 md:p-6",
+    "grid_gap": "gap-2 md:gap-4",
+    "card_radius": "rounded-none or rounded-sm (max 4px)",
+    "border_style": "1px solid subtle border, 'Grid Borders' technical look"
+  },
+  "components": {
+    "cards": "Flat background (bg-surface), sharp corners (rounded-sm), 1px solid subtle border, no drop shadow. Hover state: slight border color shift.",
+    "alerts_and_badges": "High contrast text with 15-20% opacity background of the severity color, sharp borders.",
+    "buttons": "Square edges, solid high-contrast backgrounds for primary CTA. Use icon-only or icon+text. Hover: slight scaling or opacity shift.",
+    "camera_feeds": "Aspect ratio 16:9, border ring based on AI detection status (e.g. flashing red border on critical anomaly). Overlay timestamps and AI data using IBM Plex Mono.",
+    "charts": "Recharts with dark mode palette. Minimal grid lines (dashed, low opacity). Tooltips must have solid dark background with 1px border.",
+    "incident_log": "Dense list layout. Use colored vertical left-borders on list items corresponding to incident severity."
+  },
+  "motion": {
+    "micro_interactions": "Fast, precise, no bouncy animations. Use linear or sharp ease curves.",
+    "camera_feed_update": "Flicker/glitch subtle effect on load or status change to mimic real feeds.",
+    "alerts": "Pulsing animation for critical badges/cards."
+  },
+  "icons": {
+    "library": "Phosphor Icons",
+    "install_command": "yarn add @phosphor-icons/react",
+    "style": "Regular/Fill, dense technical dashboards"
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1749310726959-d8fccfef7ee4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBsb2JieSUyMHNlY3VyaXR5JTIwY2FtZXJhfGVufDB8fHx8MTc3NzE2ODExNnww&ixlib=rb-4.1.0&q=85",
+        "category": "camera_feed_office",
+        "description": "Office Lobby Camera View"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1761211798396-a0716cb27505?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHx1cmJhbiUyMHN0cmVldCUyMHNlY3VyaXR5JTIwY2FtZXJhfGVufDB8fHx8MTc3NzE2ODExNnww&ixlib=rb-4.1.0&q=85",
+        "category": "camera_feed_street",
+        "description": "Urban Street Exterior Camera View"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1653750366046-289780bd8125?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxwYXJraW5nJTIwbG90JTIwc2VjdXJpdHklMjBjYW1lcmF8ZW58MHx8fHwxNzc3MTY4MTE2fDA&ixlib=rb-4.1.0&q=85",
+        "category": "camera_feed_parking",
+        "description": "Parking Lot Camera View"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1721972248711-c36ebcc6337c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBzZWN1cml0eSUyMGd1YXJkJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc3MTY4MTE2fDA&ixlib=rb-4.1.0&q=85",
+        "category": "user_avatar",
+        "description": "Security Admin Avatar"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Set the overall app theme to 'dark'.",
+    "Ensure all cards use sharp edges (rounded-none or rounded-sm max) and have a 1px solid subtle border (border-border). Avoid soft shadows entirely.",
+    "Implement the live camera grid using the 'Control Room' bento pattern: 1 large dominant feed, smaller secondary feeds on the side or in a grid.",
+    "Real-time object detection bounding boxes (TensorFlow.js) should map to the severity colors (e.g. green box for persons, red box for unauthorized/anomaly).",
+    "All timestamps, system metrics, and live data MUST use the 'IBM Plex Mono' font.",
+    "DO NOT USE ANY PLACEHOLDER IMAGES (no placehold.it, no dummyimage). Use the provided image_urls for the mock camera feeds.",
+    "Include 'data-testid' attributes on all interactive elements (e.g., data-testid='camera-select-dropdown', data-testid='alert-resolve-btn')."
+  ]
+}
